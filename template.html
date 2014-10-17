@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="public/style{{align}}.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div> {{city}} </div>
+  {{#days}}
+  <ul>
+ <li>{{dt}}</li>
+ <li>{{description}}</li>
+    <li>Утро: {{morn}} °C</li>
+ <li>День: {{day}} °C</li>
+    <li>Вечер: {{eve}} °C</li>
+ <li>Ночь: {{night}} °C</li>
+ <li>Давление: {{pressure}} мм</li>
+ <li>Влажность: {{humidity}} %</li>
+ <li>Облачность: {{clouds}} %</li>
+ <li>Ветер: {{speed}} м/с</li>
+  </ul>
+  {{/days}}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script type="text/javascript" src="public/getcode.js"></script> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+ <form id="data" action="http://localhost:3000/get">
+  <div>Расположение</div>
+  <input type="radio" name="align" value="v" checked="checked" />Вертикальное<br/>
+  <input type="radio" name="align" value="h" />Горизонтальное<br/>  
+  <div>Город</div>
+  <select form="data" name="city" id="city">
+   {{#cities}}
+   <option name="city" value="{{city}}">{{city}}</option>
+   {{/cities}}
+  </select><br/>  
+  <div>Период (дней)</div>
+  <select form="data" name="days" id="days">
+   <option name="days" value="1">1</option>
+   <option name="days" value="2">2</option>
+   <option name="days" value="3">3</option>
+   <option name="days" value="4">4</option>
+   <option name="days" value="5">5</option>
+   <option name="days" value="6">6</option>
+   <option name="days" value="7">7</option>
+  </select><br/>  
+ </form>
+ <input type="submit" value="Получить код" onclick="getCode()" /> 
+ <input type="submit" form="data" value="Показать" /><br/>
+ <textarea id="code" rows="10"></textarea>
+</body>
+</html>
